@@ -1,5 +1,4 @@
 from django import forms
-from django.conf.urls import url
 from django.contrib import admin
 from django.contrib import messages
 from django.contrib.admin import helpers
@@ -7,7 +6,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext_lazy as _
-
+from django.urls import path
 from .base import get_registered_plugins, get_registered_layouts
 from .constants import ACTION_CHOICE_REPLACE
 from .models import (
@@ -244,7 +243,7 @@ class DashboardPluginAdmin(admin.ModelAdmin):
         """Get urls."""
         my_urls = [
             # Bulk change dashboard plugins
-            url(r'^bulk-change-dashboard-plugins/$',
+            path(r'^bulk-change-dashboard-plugins/$',
                 self.bulk_change_dashboard_plugins,
                 name='bulk_change_dashboard_plugins'),
         ]
