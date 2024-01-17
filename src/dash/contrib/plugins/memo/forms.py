@@ -31,7 +31,7 @@ class MemoForm(forms.Form, DashboardPluginFormBase):
     text = forms.CharField(label=_("Text"), required=True,
                            widget=forms.widgets.Textarea)
 
-
+#TODO sollte in settings konfiguriert werden
 # Basic TinyMCE config
 MCE_ATTRS = {
     'plugins': 'visualchars,paste',
