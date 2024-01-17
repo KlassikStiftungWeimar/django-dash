@@ -35,12 +35,12 @@ class MemoForm(forms.Form, DashboardPluginFormBase):
 # Basic TinyMCE config
 MCE_ATTRS = {
     'plugins': 'visualchars,paste',
-    'theme': 'advanced',
+    'theme': 'silver',
     'theme_advanced_buttons1':
         'formatselect,|,bold,italic,underline,|,bullist,numlist',
     'theme_advanced_buttons2': 'link,unlink,|,code',
-    'width': '300',
-    'delta_height': '150',
+    'width': '500',
+    'delta_height': '200',
     'relative_urls': 0
 }
 
