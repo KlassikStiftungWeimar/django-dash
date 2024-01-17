@@ -2,17 +2,6 @@ from django.template.loader import render_to_string
 
 from dash.base import BaseDashboardPluginWidget
 
-__author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
-__copyright__ = '2013-2021 Artur Barseghyan'
-__license__ = 'GPL-2.0-only OR LGPL-2.1-or-later'
-__all__ = (
-    'BaseDummyWidget',
-    'Dummy1x1Widget',
-    'Dummy1x2Widget',
-    'Dummy2x1Widget',
-    'Dummy2x2Widget',
-    'Dummy3x3Widget'
-)
 
 # ************************************************************************
 # ************************* Base widget for Dummy plugin *****************
@@ -72,6 +61,15 @@ class Dummy2x2Widget(BaseDummyWidget):
 class Dummy3x3Widget(BaseDummyWidget):
     """3x3 dummy plugin widget."""
 
-    plugin_uid = 'dummy_3x3'
+    plugin_uid = 'dummy_3x2'
     cols = 3
-    rows = 3
+    rows = 2
+
+
+
+class Dummy4x2Widget(BaseDummyWidget):
+    """3x3 dummy plugin widget."""
+
+    plugin_uid = 'dummy_4x2'
+    cols = 4
+    rows = 2
