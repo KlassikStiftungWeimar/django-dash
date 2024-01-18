@@ -84,7 +84,7 @@ class NewsItem(models.Model):
         :return string:
         """
         kwargs = {'slug': self.slug}
-        return reverse('news.detail', kwargs=kwargs)
+        return reverse('news:detail', kwargs=kwargs)
 
     def admin_image_preview(self):
         """Preview of the ``image``.

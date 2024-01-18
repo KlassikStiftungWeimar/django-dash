@@ -11,13 +11,15 @@ __all__ = (
     'urlpatterns',
 )
 
+app_name="news"
 
 urlpatterns = [
     # Listing URL
-    url(r'^$', view=browse, name='news.browse'),
+    url(r'^$', view=browse, name='browse'),
 
     # Detail URL
     url(r'^(?P<slug>(?!overview\-)[\w\-\_\.\,]+)/$',
         view=detail,
         name='detail'),
 ]
+

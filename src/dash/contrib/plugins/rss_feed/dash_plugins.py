@@ -30,6 +30,10 @@ class BaseReadRSSFeedPlugin(BaseDashboardPlugin):
 sizes = (
     (2, 3),
     (3, 3),
+    (2, 4),
+    (3, 4),
+    (4, 3),
+    (4, 2)
 )
 
 plugin_factory(BaseReadRSSFeedPlugin, 'read_rss_feed', sizes)

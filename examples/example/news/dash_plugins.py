@@ -38,7 +38,9 @@ class BaseNewsPlugin(BaseDashboardPlugin):
 # *****************************************************************************
 sizes = (
     (2, 5),
-    (4, 5)
+    (4, 5),
+    (4, 4),
+    (2,4),
 )
 
 plugin_factory(BaseNewsPlugin,
@@ -57,3 +59,5 @@ plugin_widget_factory(BaseNewsWidget,
                       'main',
                       'news',
                       main_sizes)
+
+
